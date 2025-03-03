@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="1.0">
+    <circuit name="Main">
+        <!-- Input A -->
+        <comp lib="0" loc="(100,50)" name="Pin">
+            <a name="label" val="A"/>
+            <a name="facing" val="east"/>
+        </comp>
+        <!-- Enable (Active LOW) -->
+        <comp lib="0" loc="(100,100)" name="Pin">
+            <a name="label" val="G̅"/>
+            <a name="facing" val="east"/>
+        </comp>
+
+        <!-- NOT Gate for Active LOW Enable -->
+        <comp lib="2" loc="(200,100)" name="NOT Gate"/>
+
+        <!-- AND Gate for Tri-State Control -->
+        <comp lib="2" loc="(300,50)" name="AND Gate"/>
+
+        <!-- Controlled Switch for High Impedance Effect -->
+        <comp lib="2" loc="(400,50)" name="Controlled Switch"/>
+
+        <!-- Output LED -->
+        <comp lib="0" loc="(500,50)" name="LED">
+            <a name="label" val="Y"/>
+        </comp>
+
+        <!-- Wiring Connections -->
+        <wire from="(120,50)" to="(280,50)"/>   <!-- A input to AND Gate -->
+        <wire from="(120,100)" to="(180,100)"/> <!-- G̅ to NOT Gate -->
+        <wire from="(220,100)" to="(280,100)"/> <!-- NOT G̅ to AND Gate -->
+        <wire from="(320,50)" to="(380,50)"/>   <!-- AND Gate Output to Controlled Switch -->
+        <wire from="(420,50)" to="(480,50)"/>   <!-- Controlled Switch to LED Output -->
+    </circuit>
+</project>

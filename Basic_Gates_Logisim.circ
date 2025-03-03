@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="1.0">
+    <circuit name="Main">
+        <comp lib="0" loc="(100,50)" name="Pin">
+            <a name="label" val="A"/>
+            <a name="facing" val="east"/>
+        </comp>
+        <comp lib="0" loc="(100,100)" name="Pin">
+            <a name="label" val="B"/>
+            <a name="facing" val="east"/>
+        </comp>
+        <comp lib="2" loc="(200,50)" name="AND Gate"/>
+        <comp lib="2" loc="(200,100)" name="OR Gate"/>
+        <comp lib="2" loc="(200,150)" name="NOT Gate"/>
+        <comp lib="2" loc="(200,200)" name="NAND Gate"/>
+        <comp lib="2" loc="(200,250)" name="NOR Gate"/>
+        <comp lib="2" loc="(200,300)" name="XOR Gate"/>
+        <comp lib="2" loc="(200,350)" name="XNOR Gate"/>
+        <comp lib="0" loc="(300,50)" name="LED">
+            <a name="label" val="AND"/>
+        </comp>
+        <comp lib="0" loc="(300,100)" name="LED">
+            <a name="label" val="OR"/>
+        </comp>
+        <comp lib="0" loc="(300,150)" name="LED">
+            <a name="label" val="NOT A"/>
+        </comp>
+        <comp lib="0" loc="(300,200)" name="LED">
+            <a name="label" val="NAND"/>
+        </comp>
+        <comp lib="0" loc="(300,250)" name="LED">
+            <a name="label" val="NOR"/>
+        </comp>
+        <comp lib="0" loc="(300,300)" name="LED">
+            <a name="label" val="XOR"/>
+        </comp>
+        <comp lib="0" loc="(300,350)" name="LED">
+            <a name="label" val="XNOR"/>
+        </comp>
+        <wire from="(120,50)" to="(180,50)"/>
+        <wire from="(120,100)" to="(180,100)"/>
+        <wire from="(220,50)" to="(280,50)"/>
+        <wire from="(220,100)" to="(280,100)"/>
+        <wire from="(220,150)" to="(280,150)"/>
+        <wire from="(220,200)" to="(280,200)"/>
+        <wire from="(220,250)" to="(280,250)"/>
+        <wire from="(220,300)" to="(280,300)"/>
+        <wire from="(220,350)" to="(280,350)"/>
+    </circuit>
+</project>

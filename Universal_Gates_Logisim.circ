@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="1.0">
+    <circuit name="Main">
+        <comp lib="0" loc="(100,50)" name="Pin">
+            <a name="label" val="A"/>
+            <a name="facing" val="east"/>
+        </comp>
+        <comp lib="0" loc="(100,100)" name="Pin">
+            <a name="label" val="B"/>
+            <a name="facing" val="east"/>
+        </comp>
+
+        <!-- NAND Gates for 7400 -->
+        <comp lib="2" loc="(200,50)" name="NAND Gate"/>
+        <comp lib="2" loc="(200,100)" name="NAND Gate"/>
+        <comp lib="2" loc="(200,150)" name="NAND Gate"/>
+        <comp lib="2" loc="(200,200)" name="NAND Gate"/>
+
+        <!-- NOR Gates for 7402 -->
+        <comp lib="2" loc="(400,50)" name="NOR Gate"/>
+        <comp lib="2" loc="(400,100)" name="NOR Gate"/>
+        <comp lib="2" loc="(400,150)" name="NOR Gate"/>
+        <comp lib="2" loc="(400,200)" name="NOR Gate"/>
+
+        <!-- Outputs -->
+        <comp lib="0" loc="(300,50)" name="LED">
+            <a name="label" val="NAND 1"/>
+        </comp>
+        <comp lib="0" loc="(300,100)" name="LED">
+            <a name="label" val="NAND 2"/>
+        </comp>
+        <comp lib="0" loc="(300,150)" name="LED">
+            <a name="label" val="NAND 3"/>
+        </comp>
+        <comp lib="0" loc="(300,200)" name="LED">
+            <a name="label" val="NAND 4"/>
+        </comp>
+
+        <comp lib="0" loc="(500,50)" name="LED">
+            <a name="label" val="NOR 1"/>
+        </comp>
+        <comp lib="0" loc="(500,100)" name="LED">
+            <a name="label" val="NOR 2"/>
+        </comp>
+        <comp lib="0" loc="(500,150)" name="LED">
+            <a name="label" val="NOR 3"/>
+        </comp>
+        <comp lib="0" loc="(500,200)" name="LED">
+            <a name="label" val="NOR 4"/>
+        </comp>
+
+        <!-- Wiring for Inputs -->
+        <wire from="(120,50)" to="(180,50)"/>
+        <wire from="(120,100)" to="(180,100)"/>
+        
+        <!-- Wiring for NAND Outputs -->
+        <wire from="(220,50)" to="(280,50)"/>
+        <wire from="(220,100)" to="(280,100)"/>
+        <wire from="(220,150)" to="(280,150)"/>
+        <wire from="(220,200)" to="(280,200)"/>
+
+        <!-- Wiring for NOR Outputs -->
+        <wire from="(420,50)" to="(480,50)"/>
+        <wire from="(420,100)" to="(480,100)"/>
+        <wire from="(420,150)" to="(480,150)"/>
+        <wire from="(420,200)" to="(480,200)"/>
+
+    </circuit>
+</project>

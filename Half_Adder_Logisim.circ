@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="1.0">
+    <circuit name="Main">
+        <!-- Input A -->
+        <comp lib="0" loc="(100,50)" name="Pin">
+            <a name="label" val="A"/>
+            <a name="facing" val="east"/>
+        </comp>
+
+        <!-- Input B -->
+        <comp lib="0" loc="(100,100)" name="Pin">
+            <a name="label" val="B"/>
+            <a name="facing" val="east"/>
+        </comp>
+
+        <!-- XOR Gate for Sum -->
+        <comp lib="2" loc="(200,50)" name="XOR Gate"/>
+
+        <!-- AND Gate for Carry -->
+        <comp lib="2" loc="(200,100)" name="AND Gate"/>
+
+        <!-- Output for Sum -->
+        <comp lib="0" loc="(300,50)" name="LED">
+            <a name="label" val="Sum (S)"/>
+        </comp>
+
+        <!-- Output for Carry -->
+        <comp lib="0" loc="(300,100)" name="LED">
+            <a name="label" val="Carry (C)"/>
+        </comp>
+
+        <!-- Wiring Connections -->
+        <wire from="(120,50)" to="(180,50)"/>   <!-- A to XOR & AND -->
+        <wire from="(120,100)" to="(180,100)"/> <!-- B to XOR & AND -->
+        <wire from="(220,50)" to="(280,50)"/>   <!-- XOR Output to Sum LED -->
+        <wire from="(220,100)" to="(280,100)"/> <!-- AND Output to Carry LED -->
+    </circuit>
+</project>
